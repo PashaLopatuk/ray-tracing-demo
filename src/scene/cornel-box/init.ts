@@ -2,13 +2,19 @@ import { MonkeyTeapotScene } from '@/scene/monkey-teapot-scene/Scene';
 import { createGL } from '@/utils/gl';
 import { SceneRenderer } from '@/lib/scene/render-scene';
 import { ICanvasState } from '@/lib/types/ICanvasState';
-import { MonkeyHeadMtlModelPath, MonkeyHeadObjModelPath } from '@/lib/models';
+import {
+  CornellBoxMtlModelPath,
+  CornellBoxObjModelPath,
+  MonkeyHeadMtlModelPath,
+  MonkeyHeadObjModelPath,
+} from '@/lib/models';
 import {
   CanvasFragmentShaderPath,
   CanvasVertexShaderPath,
   SampleFragmentShaderPath,
   SampleVertexShaderPath,
 } from '@/lib/shaders';
+import { CornelBoxScene } from '@/scene/cornel-box/Scene';
 
 interface IInitSceneProps {
   canvas: HTMLCanvasElement
@@ -20,13 +26,13 @@ interface IInitSceneProps {
   onRenderReset?: Function
 }
 
-export async function initMonkeyAndTeapotScene({ canvas, canvasState, onRenderReset, onLoaded, onLoading, onRenderUpdate, onLoadingError }: IInitSceneProps) {
+export async function initCornelBoxScene({ canvas, canvasState, onRenderReset, onLoaded, onLoading, onRenderUpdate, onLoadingError }: IInitSceneProps) {
   const gl = createGL(canvas);
 
-  const scene = new MonkeyTeapotScene({
+  const scene = new CornelBoxScene({
     gl: gl,
-    objUrl: MonkeyHeadObjModelPath,
-    mtlUrl: MonkeyHeadMtlModelPath,
+    objUrl: CornellBoxObjModelPath,
+    mtlUrl: CornellBoxMtlModelPath,
   });
 
   const sceneRenderer = new SceneRenderer({

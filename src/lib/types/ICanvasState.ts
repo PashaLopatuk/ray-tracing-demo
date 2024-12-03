@@ -37,8 +37,8 @@ export interface ICanvasState {
 }
 
 export const defaultCanvasState: Readonly<ICanvasState> = {
-  canvasWd: 200,
-  canvasHt: 200,
+  canvasWd: 500,
+  canvasHt: 500,
 
   canvasScale: 100,
 

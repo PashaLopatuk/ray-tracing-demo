@@ -39,8 +39,8 @@ export const initialAppState: AppState = {
   etaTime: '',
   avgTime: '',
 
-  canvasWidth: 100,
-  canvasHeight: 100,
+  canvasWidth: 500,
+  canvasHeight: 500,
   canvasScale: 100
 };
 
